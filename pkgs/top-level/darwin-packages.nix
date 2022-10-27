@@ -42,7 +42,7 @@ lib.makeScopeWithSplicing splicePackages newScope otherSplices (_: {}) (spliced:
   apple_sdk_11_0 = pkgs.callPackage ../os-specific/darwin/apple-sdk-11.0 { };
 
   # Pick an SDK
-  apple_sdk = if stdenv.hostPlatform.isAarch64 then apple_sdk_11_0 else apple_sdk_10_12;
+  apple_sdk = apple_sdk_11_0;
 
   # Pick the source of libraries: either Apple's open source releases, or the
   # SDK.
